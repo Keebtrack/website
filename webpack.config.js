@@ -22,7 +22,7 @@ module.exports = {
   watch: !isProduction,
   devtool: 'cheap-module-source-map',
   entry: {
-    styles: path.resolve(stylesPath, 'main.scss'),
+    styles: path.resolve(stylesPath, 'bootstrap.scss'),
     app: isProduction ? [path.resolve(sourcePath, 'index.js')] : ['babel-polyfill', 'react-hot-loader/patch', './src/index.js']
   },
   output: {
@@ -37,7 +37,8 @@ module.exports = {
       path.resolve(__dirname, 'node_modules')
     ],
     alias: {
-      '@components': path.resolve(sourcePath, 'components')
+      '@components': path.resolve(sourcePath, 'components'),
+      '@pages': path.resolve(sourcePath, 'pages')
     }
   },
   devServer: {

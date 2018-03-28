@@ -18,7 +18,8 @@
     "react/jsx-curly-spacing": [2, "always"],
     "react/jsx-indent": 0,
     "jsx-a11y/anchor-is-valid": 0,
-    "react/forbid-prop-types": 0
+    "react/forbid-prop-types": 0,
+    "react/jsx-first-prop-new-line": 0
   },
   "globals": {
     "document": true,

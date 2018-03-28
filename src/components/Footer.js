@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => (
     <footer className="blog-footer">
-        <p>Find us at github<a href="https://github.com/keebtrack">/keebtrack</a>.</p>
+        <p>Find us at github.com<a href="https://github.com/keebtrack">/keebtrack</a></p>
     </footer>
 );
 

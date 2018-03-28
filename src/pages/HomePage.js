@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import gql from 'graphql-tag';
 import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 
 import Card from '@components/Card';
+import Promo from '@components/Promo';
 
 class HomePage extends Component {
   constructor(props) {
@@ -20,7 +21,10 @@ class HomePage extends Component {
           ?
             <div>loading</div>
           :
-            data.groupbuys.results.map(groupbuy => <Card groupbuy={ groupbuy } />)
+            <Fragment>
+              <Promo groupbuy={ data.groupbuys.results[2] } />
+              { data.groupbuys.results.map(groupbuy => <Card groupbuy={ groupbuy } />) }
+            </Fragment>
         }
       </div>
     );

@@ -38,7 +38,8 @@ module.exports = {
     ],
     alias: {
       '@components': path.resolve(sourcePath, 'components'),
-      '@pages': path.resolve(sourcePath, 'pages')
+      '@pages': path.resolve(sourcePath, 'pages'),
+      '@helpers': path.resolve(sourcePath, 'helpers')
     }
   },
   devServer: {

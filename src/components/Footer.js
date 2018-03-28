@@ -1,16 +1,9 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 
 const Footer = () => (
-  <div>navbar</div>
+    <footer className="blog-footer">
+        <p>Find us at github<a href="https://github.com/keebtrack">/keebtrack</a>.</p>
+    </footer>
 );
-
-Footer.propTypes = {
-    // onClickHandler: PropTypes.func
-};
-
-Footer.defaultProps = {
-    // onClickHandler: () => null
-};
 
 export default Footer;

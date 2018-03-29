@@ -41,6 +41,17 @@
 @import "utilities";
 @import "print";
 
+.card-show {
+  margin-bottom: 15px !important;
+  opacity: 1;
+  transition: 0.5s opacity ease-in;
+}
+
+.card-hide {
+  margin-bottom: 15px !important;
+  opacity: 0;
+}
+
 .tag-container {
   padding-left: 0 !important;
 }

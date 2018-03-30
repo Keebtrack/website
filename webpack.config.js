@@ -98,9 +98,10 @@ module.exports = {
     ]
     // add plugins based on environment
     .concat(isProduction ? [
-      new PurifyCSSPlugin({
-        paths: glob.sync(sourcePath)
-      }),
+      // new PurifyCSSPlugin({
+      //   paths: glob.sync(path.join(__dirname, 'src/*.js')),
+      //   purifyOptions: { info: true, minify: false }
+      // }),
       new StyleExtHtmlWebpackPlugin({
         minify: true
       }),

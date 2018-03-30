@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "NODE_ENV=development webpack-dev-server",
+    "serve": "node serve.js",
     "build": "NODE_ENV=production webpack"
   },
   "author": "",
@@ -15,6 +16,7 @@
     "apollo-client": "^2.2.8",
     "apollo-client-preset": "^1.0.8",
     "apollo-link-http": "^1.5.3",
+    "express": "^4.16.3",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.8.0",
     "prop-types": "^15.6.0",
@@ -25,7 +27,8 @@
     "react-hot-loader": "^3.1.3",
     "react-infinite-scroller": "^1.1.3",
     "react-intersection-observer": "^3.0.3",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "serve-static": "^1.13.2"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",

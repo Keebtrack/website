@@ -18,9 +18,9 @@ class HomePage extends Component {
   }
 
   fetchMore() {
-    const after = this.props.data.loading ? null : this.props.data.groupbuys.pageInfo.after;
+    const { after } = this.props.data.groupbuys.pageInfo;
     this.props.data.fetchMore({
-      variables: { first: 1, after },
+      variables: { first: 3, after },
       updateQuery: ({ groupbuys }, { fetchMoreResult: { groupbuys: newGroupbuys } }) => ({
         groupbuys: {
           __typename: groupbuys.__typename,
@@ -41,8 +41,8 @@ class HomePage extends Component {
           <Fragment>
           <Promo groupbuy={ data.groupbuys.results[0] } />
           <InfiniteScroll loadMore={ this.fetchMore } hasMore={ data.groupbuys.pageInfo.hasNext }>
-            { data.groupbuys.results.map(groupbuy =>
-              <Card key={ groupbuy.id } groupbuy={ groupbuy } />)
+            { data.groupbuys.results.map((groupbuy, idx) =>
+              <Card key={ `${groupbuy.id}-${idx}` } groupbuy={ groupbuy } />)
             }
           </InfiniteScroll>
          </Fragment>
@@ -67,6 +67,7 @@ const GROUPBUYS_QUERY = gql`
             openDate
             closeDate
             category
+            url
            }
         }
     }
@@ -83,7 +84,7 @@ HomePage.defaultProps = {
 export default compose(graphql(GROUPBUYS_QUERY, {
   options: {
     variables: {
-      first: 1,
+      first: 3,
       after: ''
     }
   },

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 
-class FAQPage extends Component {
+class Meetups extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,17 +10,17 @@ class FAQPage extends Component {
   }
   render() {
     return (
-      <div>FAQ</div>
+      <div>meetups Soon!</div>
     );
   }
 }
 
-FAQPage.propTypes = {
+Meetups.propTypes = {
   //   onClickHandler: PropTypes.func
 };
 
-FAQPage.defaultProps = {
+Meetups.defaultProps = {
   //   onClickHandler: () => null
 };
 
-export default FAQPage;
+export default Meetups;

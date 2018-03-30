@@ -16,21 +16,24 @@ const cardStyle = inView => {
 const Card = ({ groupbuy }) => (
   <Observer triggerOnce="true">
       {inView => (
-        <div className={ `${cardStyle(inView)} card flex-md-row mb-4 box-shadow h-md-250` }>
+        <div
+            onClick={ () => window.open(`${groupbuy.url}`, '_blank') }
+            className={ `${cardStyle(inView)} card flex-md-row mb-4 box-shadow h-md-250` }
+        >
             <img className="card-img-left flex-auto d-none d-md-block" src={ groupbuy.imgUrl } alt={ groupbuy.name } />
             <div className="card-body d-flex flex-column align-items-start">
                 { getCategorie(groupbuy.category) }
                 { getDates(groupbuy.openDate, groupbuy.closeDate) }
                 <h3 className="mb-0">
-                    <a className="text-dark" href="#">{ groupbuy.name }</a>
+                    <a className="text-dark" href="s#">{ groupbuy.name }</a>
                 </h3>
                 <div className="d-flex align-items-start">
-                    { groupbuy.tags.map(tag => <div className="p-2 tag-container"><span key={ tag } className="badge badge-secondary">{tag}</span></div>) }
+                    { groupbuy.tags.map((tag, idx) => <div className="p-2 tag-container"><span key={ `${tag}-${groupbuy.id}-${idx}` } className="badge badge-secondary">{tag}</span></div>) }
                 </div>
-                <p className="card-text mb-auto">{ `${take(60, groupbuy.description)}..` }</p>
-                <div style={ { width: '100%' } } className="d-flex justify-content-end">
+                <p className="card-text mb-auto">{ `${take(150, groupbuy.description)}..` }</p>
+                {/* <div style={ { width: '100%' } } className="d-flex justify-content-end">
                     <a href="#" className="p-2 btn btn-primary">Website</a>
-                </div>
+                </div> */}
              </div>
         </div>
       )}

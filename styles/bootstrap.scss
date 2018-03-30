@@ -41,6 +41,10 @@
 @import "utilities";
 @import "print";
 
+.card {
+  cursor: pointer;
+}
+
 .card-show {
   margin-bottom: 15px !important;
   opacity: 1;

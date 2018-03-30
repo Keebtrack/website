@@ -2,6 +2,10 @@
   "extends": "airbnb",
   "parser": "babel-eslint",
   "plugins": ["react"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
   "rules": {
     "class-methods-use-this": 0,
     "import/extensions": 0,
@@ -20,7 +24,11 @@
     "jsx-a11y/anchor-is-valid": 0,
     "react/forbid-prop-types": 0,
     "react/jsx-first-prop-new-line": 0,
-    "no-underscore-dangle": 0
+    "no-underscore-dangle": 0,
+    "react/no-array-index-key": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "react/jsx-indent-props": 0
   },
   "globals": {
     "document": true,

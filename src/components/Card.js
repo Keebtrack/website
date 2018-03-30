@@ -31,9 +31,6 @@ const Card = ({ groupbuy }) => (
                     { groupbuy.tags.map((tag, idx) => <div className="p-2 tag-container"><span key={ `${tag}-${groupbuy.id}-${idx}` } className="badge badge-secondary">{tag}</span></div>) }
                 </div>
                 <p className="card-text mb-auto">{ `${take(150, groupbuy.description)}..` }</p>
-                {/* <div style={ { width: '100%' } } className="d-flex justify-content-end">
-                    <a href="#" className="p-2 btn btn-primary">Website</a>
-                </div> */}
              </div>
         </div>
       )}

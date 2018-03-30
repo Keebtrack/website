@@ -39,7 +39,7 @@ class HomePage extends Component {
           !data.loading
           &&
           <Fragment>
-          <Promo groupbuy={ data.groupbuys.results[0] } />
+          <Promo groupbuy={ data.groupbuys.results[2] } />
           <InfiniteScroll loadMore={ this.fetchMore } hasMore={ data.groupbuys.pageInfo.hasNext }>
             { data.groupbuys.results.map((groupbuy, idx) =>
               <Card key={ `${groupbuy.id}-${idx}` } groupbuy={ groupbuy } />)

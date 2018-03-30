@@ -14,9 +14,14 @@ const Navbar = () => (
              <Link className="p-2 text-muted" to="/meetups">Meetups</Link>
              <Link className="p-2 text-muted" to="/vendors">Vendors</Link>
              <Link className="p-2 text-muted" to="/interestchecks">Interest Checks</Link>
-             <Link className="p-2 text-muted" to="/calendar">Calendar</Link>
-             <Link className="p-2 text-muted" to="/FAQ">FAQ</Link>
-             <Link className="p-2 btn btn-sm btn-outline-success" to="/sponsor">Become a Sponsor</Link>
+             {
+                window.innerWidth < 780 ? null :
+                <Fragment>
+                    <Link className="p-2 text-muted" to="/calendar">Calendar</Link>
+                    <Link className="p-2 text-muted" to="/FAQ">FAQ</Link>
+                    <Link className="p-2 btn btn-sm btn-outline-success" to="/sponsor">Become a Sponsor</Link>
+                </Fragment>
+             }
             </nav>
         </div>
     </Fragment>

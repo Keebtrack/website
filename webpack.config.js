@@ -79,7 +79,7 @@ module.exports = {
       new PreloadWebpackPlugin({
         rel: 'preload',
         as: 'script',
-        include: 'all',
+        allChunks: true,
         fileBlacklist: [/\.(css|map)$/, /base?.+/]
       }),
       new ScriptExtHtmlWebpackPlugin({

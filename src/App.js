@@ -7,7 +7,7 @@ import Meetups from '@pages/Meetups';
 import Vendors from '@pages/Vendors';
 import InterestChecks from '@pages/InterestChecks';
 import Sponsor from '@pages/Sponsor';
-import Calendar from '@pages/calendar';
+import Calendar from '@pages/Calendar';
 
 import Navbar from '@components/Navbar';
 import Footer from '@components/Footer';
@@ -21,7 +21,7 @@ const App = () => (
                 <Route path="/meetups" component={ Meetups } />
                 <Route path="/vendors" component={ Vendors } />
                 <Route path="/interestchecks" component={ InterestChecks } />
-                <Route path="/sponser" component={ Sponsor } />
+                <Route path="/sponsor" component={ Sponsor } />
                 <Route path="/calendar" component={ Calendar } />
                 <Route path="/" component={ HomePage } />
             </Switch>

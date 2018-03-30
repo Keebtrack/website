@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "NODE_ENV=production npm run build && npm run serve",
+    "start": "NODE_ENV=production node serve.js",
     "dev": "NODE_ENV=development webpack-dev-server",
     "serve": "node serve.js",
     "build": "NODE_ENV=production webpack",

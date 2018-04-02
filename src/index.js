@@ -10,7 +10,9 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import App from './App';
 
 const link = new HttpLink({
-  uri: 'http://localhost:9094/graphql',
+  /* eslint-disable */
+  uri: API_URL,
+  /* eslint-enable */
   credentials: 'same-origin',
 });
 

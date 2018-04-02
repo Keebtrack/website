@@ -1,13 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
-const glob = require('glob');
+// const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const PurifyCSSPlugin = require('purifycss-webpack');
+// const PurifyCSSPlugin = require('purifycss-webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const staticSourcePath = path.join(__dirname, 'static');
@@ -53,7 +53,8 @@ module.exports = {
   plugins: [
       new CleanWebpackPlugin(buildPath),
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': isProduction ? JSON.stringify('production') : JSON.stringify('development')
+        'process.env.NODE_ENV': isProduction ? JSON.stringify('production') : JSON.stringify('development'),
+        API_URL: isProduction ? JSON.stringify('http://api.keebtrack.com/graphql') : JSON.stringify('http://localhost:9094/graphql')
       }),
       new webpack.optimize.ModuleConcatenationPlugin(),
       new webpack.optimize.CommonsChunkPlugin({

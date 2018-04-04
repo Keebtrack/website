@@ -28,11 +28,11 @@ class Calendar extends Component {
         <p>
           And after that paste it in your favorite calendar app
         </p>
-        <img className="img-fluid" style={ { width: '50%' } } src={ step1 } alt="logo" />
+        <img className="img-fluid" src={ step1 } alt="logo" />
         <p>
           It is important to note that you want to set the sync time low enough!
         </p>
-        <img className="img-fluid" style={ { width: '50%', margin: '0 auto' } } src={ step2 } alt="logo" />
+        <img className="img-fluid" src={ step2 } alt="logo" />
         <p>
           And now you should have a working calendar with all the group buys <span role="img">👍</span>
         </p>

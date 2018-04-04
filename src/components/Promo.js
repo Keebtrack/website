@@ -15,7 +15,7 @@ const Promo = ({ groupbuy }) => (
         <h1 className="display-4 font-italic">{groupbuy.name}</h1>
         { window.innerWidth < 780 ? null : <p className="lead my-3">{ `${take(100, groupbuy.description)}..` }</p> }
         <p className="lead mb-0">
-        <a href="#" className="p-2 btn btn-primary">Visit now</a>
+        <a href="#" onClick={ () => window.open(`${groupbuy.url}`, '_blank') } className="p-2 btn btn-primary">Visit now</a>
         </p>
       </div>
     </div>

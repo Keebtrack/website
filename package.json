@@ -29,6 +29,7 @@
     "ramda": "^0.25.0",
     "react": "^16.2.0",
     "react-apollo": "^2.1.1",
+    "react-clipboard.js": "^1.1.3",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^3.1.3",
     "react-infinite-scroller": "^1.1.3",
@@ -54,6 +55,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
     "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
     "glob": "^7.1.2",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.2.2",
@@ -67,6 +69,7 @@
     "script-ext-html-webpack-plugin": "^1.8.8",
     "style-ext-html-webpack-plugin": "^3.4.7",
     "style-loader": "^0.20.1",
+    "url-loader": "^1.0.1",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
   }

@@ -38,6 +38,7 @@ module.exports = {
     ],
     alias: {
       '@components': path.resolve(sourcePath, 'components'),
+      '@images': path.resolve(staticSourcePath, 'images'),
       '@pages': path.resolve(sourcePath, 'pages'),
       '@helpers': path.resolve(sourcePath, 'helpers')
     }

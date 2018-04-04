@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 
+// TODO add span with stats -> <span className="badge badge-pill badge-dark">11</span>
+
 const Navbar = () => (
   <Fragment>
         <header className="blog-header py-3">
@@ -11,11 +13,12 @@ const Navbar = () => (
         </header>
         <div className="nav-scroller">
             <nav className="nav d-flex justify-content-between">
+             <Link className="p-2 text-muted" to="/groupbuys">Group buys</Link>
+             <Link className="p-2 text-muted" to="/interestchecks">Interest Checks</Link>
              <Link className="p-2 text-muted" to="/meetups">Meetups</Link>
              <Link className="p-2 text-muted" to="/vendors">Vendors</Link>
-             <Link className="p-2 text-muted" to="/interestchecks">Interest Checks</Link>
              {
-                window.innerWidth < 780 ? null :
+                window.innerWidth < 780 ? null : // fix this
                 <Fragment>
                     <Link className="p-2 text-muted" to="/calendar">Calendar</Link>
                     <Link className="p-2 text-muted" to="/FAQ">FAQ</Link>

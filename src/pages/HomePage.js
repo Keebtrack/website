@@ -6,7 +6,7 @@ import InfiniteScroll from 'react-infinite-scroller';
 
 import Card from '@components/Card';
 import Promo from '@components/Promo';
-import SearchBar from '@components/SearchBar';
+// import SearchBar from '@components/SearchBar';
 import SecondaryPromo from '@components/SecondaryPromo';
 
 class HomePage extends Component {
@@ -46,10 +46,10 @@ class HomePage extends Component {
             <SecondaryPromo groupbuy={ data.groupbuys.results[1] } />
             <SecondaryPromo groupbuy={ data.groupbuys.results[2] } />
           </div>
-          <h3 className="pb-3 mb-4 font-italic border-bottom">
+          {/* <h3 className="pb-3 mb-4 font-italic border-bottom">
             Active Group Buys
           </h3>
-          <SearchBar style={ { marginBottom: 15 } } />
+          <SearchBar style={ { marginBottom: 15 } } /> */}
           <InfiniteScroll loadMore={ this.fetchMore } hasMore={ data.groupbuys.pageInfo.hasNext }>
             { data.groupbuys.results.map((groupbuy, idx) =>
               <Card key={ `${groupbuy.id}-${idx}` } groupbuy={ groupbuy } />)

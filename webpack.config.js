@@ -55,7 +55,7 @@ module.exports = {
       new CleanWebpackPlugin(buildPath),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': isProduction ? JSON.stringify('production') : JSON.stringify('development'),
-        API_URL: isProduction ? JSON.stringify('http://api.keebtrack.com/graphql') : JSON.stringify('http://localhost:9094/graphql')
+        API_URL: isProduction ? JSON.stringify('https://api.keebtrack.com/graphql') : JSON.stringify('http://localhost:9094/graphql')
       }),
       new webpack.optimize.ModuleConcatenationPlugin(),
       new webpack.optimize.CommonsChunkPlugin({

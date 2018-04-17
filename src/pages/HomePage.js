@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 import InfiniteScroll from 'react-infinite-scroller';
 
-import Card from '@components/Card';
+import ImageCard from '@components/ImageCard';
 import Promo from '@components/Promo';
 // import SearchBar from '@components/SearchBar';
 import SecondaryPromo from '@components/SecondaryPromo';
@@ -52,7 +52,7 @@ class HomePage extends Component {
           <SearchBar style={ { marginBottom: 15 } } /> */}
           <InfiniteScroll loadMore={ this.fetchMore } hasMore={ data.groupbuys.pageInfo.hasNext }>
             { data.groupbuys.results.map((groupbuy, idx) =>
-              <Card key={ `${groupbuy.id}-${idx}` } groupbuy={ groupbuy } />)
+              <ImageCard key={ `${groupbuy.id}-${idx}` } groupbuy={ groupbuy } />)
             }
           </InfiniteScroll>
          </Fragment>

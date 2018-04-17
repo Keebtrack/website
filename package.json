@@ -35,6 +35,7 @@
     "react-hot-loader": "^3.1.3",
     "react-infinite-scroller": "^1.1.3",
     "react-intersection-observer": "^3.0.3",
+    "react-render-html": "^0.6.0",
     "react-router-dom": "^4.2.2",
     "serve-static": "^1.13.2"
   },

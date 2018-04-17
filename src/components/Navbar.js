@@ -14,28 +14,27 @@ const Navbar = () => (
         <div className="nav-scroller">
             <nav className="nav d-flex justify-content-between">
              <Link className="p-2 text-muted" to="/groupbuys">Group buys</Link>
-             <Link className="p-2 text-muted" to="/interestchecks">Interest Checks</Link>
-             <Link className="p-2 text-muted" to="/meetups">Meetups</Link>
+             {/* <Link className="p-2 text-muted" to="/interestchecks">Interest Checks</Link>
+             <Link className="p-2 text-muted" to="/meetups">Meetups</Link> */}
              <Link className="p-2 text-muted" to="/vendors">Vendors</Link>
              {
                 window.innerWidth < 780 ? null : // fix this
                 <Fragment>
                     <Link className="p-2 text-muted" to="/calendar">Calendar</Link>
-                    <Link className="p-2 text-muted" to="/FAQ">FAQ</Link>
-                    <Link className="p-2 btn btn-sm btn-outline-success" to="/sponsor">Become a Sponsor</Link>
+                    {/* <Link className="p-2 btn btn-sm btn-outline-success"
+                         to="/sponsor">Become a Sponsor</Link> */}
                 </Fragment>
              }
+            <Link className="p-2 text-muted" to="/FAQ">FAQ</Link>
             </nav>
         </div>
     </Fragment>
 );
 
 Navbar.propTypes = {
-  // onClickHandler: PropTypes.func
 };
 
 Navbar.defaultProps = {
-  // onClickHandler: () => null
 };
 
 export default Navbar;

@@ -37,6 +37,7 @@
     "react-intersection-observer": "^3.0.3",
     "react-render-html": "^0.6.0",
     "react-router-dom": "^4.2.2",
+    "rimp": "^0.1.5",
     "serve-static": "^1.13.2"
   },
   "devDependencies": {

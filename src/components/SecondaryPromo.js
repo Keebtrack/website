@@ -7,7 +7,7 @@ import getDates from '@helpers/dates';
 
 const SecondaryPromo = ({ groupbuy }) => (
   <div className="col-md-6">
-    <div className="card flex-md-row mb-4 box-shadow h-md-250">
+    <div className="card flex-md-row mb-4 box-shadow h-md-250" onClick={ () => window.open(`${groupbuy.url}`, '_blank') }>
       <div className="card-body d-flex flex-column align-items-start">
         <strong className="d-inline-block mb-2 text-primary">  { getCategorie(groupbuy.category) }</strong>
         <h3 className="mb-0">

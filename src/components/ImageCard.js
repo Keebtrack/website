@@ -20,7 +20,7 @@ const Card = ({ groupbuy }) => (
             onClick={ () => window.open(`${groupbuy.url}`, '_blank') }
             className={ `${cardStyle(inView)} card flex-md-row mb-4 box-shadow h-md-250` }
         >
-            <img className="card-img-left flex-auto d-none d-md-block" src={ groupbuy.imgUrl } alt={ groupbuy.name } />
+            <img className="card-img-left flex-auto d-md-block" src={ groupbuy.imgUrl } alt={ groupbuy.name } />
             <div className="card-body d-flex flex-column align-items-start">
                 { getCategorie(groupbuy.category) }
                 { getDates(groupbuy.openDate, groupbuy.closeDate) }

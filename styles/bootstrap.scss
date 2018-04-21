@@ -165,6 +165,18 @@ h6 {
   }
 }
 
+@media (max-width: 768px) {
+  .card-img-left {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+  }
+
+  .card-img-right {
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+  }
+}
+
 .border-top {
   border-top: 1px solid #e5e5e5;
 }

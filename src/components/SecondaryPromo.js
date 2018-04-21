@@ -16,7 +16,7 @@ const SecondaryPromo = ({ groupbuy }) => (
         { getDates(groupbuy.openDate, groupbuy.closeDate) }
         <p className="card-text mb-auto">{ `${take(75, groupbuy.description)}..` }</p>
       </div>
-      <img className="card-img-right flex-auto d-none d-md-block" src={ groupbuy.imgUrl } alt={ groupbuy.name } />
+      <img className="card-img-right flex-auto d-md-block" src={ groupbuy.imgUrl } alt={ groupbuy.name } />
     </div>
   </div>
 );

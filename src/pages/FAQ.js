@@ -43,18 +43,25 @@ class FAQ extends Component {
 
     this.state = {
       questions: [{
-        id: 1,
-        question: 'How do I add my group buy?',
-        answer: `You can use the google form <a href="https://goo.gl/forms/MmXc8KGd25u1R8Zi1">here</a>,
+          id: 1,
+          question: 'How do I add my group buy?',
+          answer: `You can use the google form <a href="https://goo.gl/forms/MmXc8KGd25u1R8Zi1">here</a>,
                  and after 10 mins the info will be synced by the server and show up in the calendar and
                  on the website!`,
-        isActive: true
-      }, {
-        id: 2,
-        question: 'How do I get the groupbuy calendar?',
-        answer: 'Goto <a href="https://keebtrack.com/calendar">this section</a> and follow the instructions!',
-        isActive: false
-      }]
+          isActive: true
+        }, {
+          id: 2,
+          question: 'How do I get the groupbuy calendar?',
+          answer: 'Goto <a href="https://keebtrack.com/calendar">this section</a> and follow the instructions!',
+          isActive: false
+        },
+        {
+          id: 3,
+          question: 'I found a mistake on the website!',
+          answer: 'Please contact us at <a href="mailto:info@keebtrack.com">info@keebtrack.com</a>, or you can contact me on Reddit/<a href="https://www.reddit.com/user/klaaz0r/">klaaz0r</a>',
+          isActive: false
+        }
+      ]
     };
   }
 

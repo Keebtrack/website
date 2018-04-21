@@ -6,7 +6,7 @@ const Promo = ({ groupbuy }) => (
     <div
       style={ {
         backgroundRepeat: 'no-repeat',
-        backgroundSize: '100%',
+        backgroundSize: 'cover',
         backgroundImage: `linear-gradient( rgba(33, 33, 33, 0.30), rgba(33, 33, 33, 0.30)), url(${groupbuy.imgUrl})`
       } }
       onClick={ () => window.open(`${groupbuy.url}`, '_blank') }

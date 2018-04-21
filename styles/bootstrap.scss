@@ -135,7 +135,7 @@ h6 {
   width: 50%;
   object-fit: cover;
   height: 250px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 0 3px 3px 0;
   overflow: hidden;
   height: 100%;
 }
@@ -167,12 +167,12 @@ h6 {
 
 @media (max-width: 768px) {
   .card-img-left {
-    border-radius: 5px 5px 0 0;
+    border-radius: 3px 3px 0 0;
     width: 100%;
   }
 
   .card-img-right {
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 3px 3px;
     width: 100%;
   }
 }

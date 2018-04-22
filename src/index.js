@@ -1,5 +1,5 @@
 import 'intersection-observer';
-
+import fetch from 'unfetch';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
@@ -12,6 +12,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import App from './App';
 
 const link = new HttpLink({
+  fetch,
   /* eslint-disable */
   uri: API_URL,
   /* eslint-enable */

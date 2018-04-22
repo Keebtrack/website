@@ -39,7 +39,8 @@
     "react-render-html": "^0.6.0",
     "react-router-dom": "^4.2.2",
     "rimp": "^0.1.5",
-    "serve-static": "^1.13.2"
+    "serve-static": "^1.13.2",
+    "unfetch": "^3.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",

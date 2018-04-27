@@ -15,7 +15,7 @@ const VendorCard = ({ vendor }) => (
       <div className="card-body">
         <h5 className="card-title">{vendor.name}</h5>
         {region(vendor.region)}
-        <p className="card-text">{`${take(140, vendor.description)}..`}.</p>
+        <p className="card-text">{`${take(100, vendor.description)}..`}.</p>
         {/* <p className="card-text"><small className="text-muted">{vendor.url}</small></p> */}
       </div>
     </div>

@@ -9,6 +9,8 @@ import { HttpLink } from 'apollo-link-http';
 import { ApolloProvider } from 'react-apollo';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
+// import runtime from 'serviceworker-webpack-plugin/lib/runtime';
+
 import App from './App';
 
 const link = new HttpLink({

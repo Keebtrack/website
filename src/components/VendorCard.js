@@ -13,7 +13,7 @@ const VendorCard = ({ vendor }) => (
     >
       <img className="card-img-top" src={ vendor.logoUrl } alt={ vendor.name } />
       <div className="card-body">
-        <h5 className="card-title">{vendor.name}</h5>
+        {/* <h5 className="card-title">{vendor.name}</h5> */}
         {region(vendor.region)}
         <p className="card-text">{`${take(80, vendor.description)}..`}.</p>
       </div>

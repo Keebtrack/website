@@ -21,6 +21,7 @@ const Navbar = () => (
                 window.innerWidth < 780 ? null : // fix this
                 <Fragment>
                     <Link className="p-2 text-muted" to="/calendar">Calendar</Link>
+                    <a className="p-2 text-muted" href="http://api.keebtrack.com/rss">RSS feed</a>
                     {/* <Link className="p-2 btn btn-sm btn-outline-success"
                          to="/sponsor">Become a Sponsor</Link> */}
                 </Fragment>

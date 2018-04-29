@@ -6,8 +6,8 @@ import InfiniteScroll from 'react-infinite-scroller';
 
 import ImageCard from '@components/ImageCard';
 import Promo from '@components/Promo';
-// import SearchBar from '@components/SearchBar';
 import SecondaryPromo from '@components/SecondaryPromo';
+import ButtonFilter from '@components/ButtonFilter';
 
 class HomePage extends Component {
   constructor(props) {
@@ -49,6 +49,12 @@ class HomePage extends Component {
            <h3 className="pb-3 mb-4 font-italic border-bottom">
             Active Group Buys
           </h3>
+          <Fragment>
+            <ButtonFilter
+              categories={ [{ name: 'Keyboards', count: 5 }, { name: 'Artisan', count: 3 }, { name: 'Keycaps', count: 8 }, { name: 'Parts', count: 7 }] }
+              tags={ ['60%', 'TKL', 'GMK', 'MITO', 'SA', 'Duck', '66%', 'MaxKey', 'Split', 'Ortho', 'WKL', 'Small', 'numpad', 'Massdrop'] }
+            />
+          </Fragment>
             {/* <SearchBar style={ { marginBottom: 15 } } /> */}
           <InfiniteScroll loadMore={ this.fetchMore } hasMore={ data.groupbuys.pageInfo.hasNext }>
             { data.groupbuys.results.map((groupbuy, idx) =>

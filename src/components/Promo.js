@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { take } from 'ramda';
+import shortText from '@helpers/shortText';
 
 const Promo = ({ groupbuy }) => (
     <div
@@ -14,7 +14,7 @@ const Promo = ({ groupbuy }) => (
     >
       <div className="col-md-6 px-0">
         <h1 className="display-4 font-italic">{groupbuy.name}</h1>
-        { window.innerWidth < 780 ? null : <p className="lead my-3">{ `${take(100, groupbuy.description)}..` }</p> }
+        { window.innerWidth < 780 ? null : <p className="lead my-3">{ shortText(150, groupbuy.description) } </p> }
         <p className="lead mb-0">
         <a href="#" onClick={ () => window.open(`${groupbuy.url}`, '_blank') } className="p-2 btn btn-primary">More info</a>
         </p>

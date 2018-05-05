@@ -14,8 +14,12 @@ const cardStyle = inView => {
   return 'card-hide';
 };
 
-const Card = ({ groupbuy }) => (
-  <Observer triggerOnce="true">
+const Card = ({ groupbuy }) => {
+  //remove some of the tags (some people have like 50..)
+  const tags = take(4, groupbuy.tags)
+
+  return (
+    <Observer key={ groupbuy.name } triggerOnce="true">
       {inView => (
         <div
             onClick={ () => window.open(`${groupbuy.url}`, '_blank') }
@@ -29,14 +33,15 @@ const Card = ({ groupbuy }) => (
                     <a className="text-dark" href="s#">{ groupbuy.name }</a>
                 </h3>
                 <div className="d-flex align-items-start">
-                    { groupbuy.tags.map((tag, idx) => <div className="p-2 tag-container"><span key={ `${tag}-${groupbuy.id}-${idx}` } className="badge badge-secondary">{tag}</span></div>) }
+                    { tags.map((tag, idx) => <div key={ `${tag}-${groupbuy.id}-${idx}` } className="p-2 tag-container"><span className="badge badge-secondary">{tag}</span></div>) }
                 </div>
                 <p className="card-text mb-auto">{ shortText(150, groupbuy.description) }</p>
              </div>
         </div>
       )}
     </Observer>
-);
+  );
+};
 
 Card.propTypes = {
   groupbuy: PropTypes.object

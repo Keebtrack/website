@@ -5,6 +5,7 @@ import Observer from 'react-intersection-observer';
 
 import getCategorie from '@helpers/category';
 import getDates from '@helpers/dates';
+import shortText from '@helpers/shortText';
 
 const cardStyle = inView => {
   if (inView) {
@@ -20,7 +21,7 @@ const Card = ({ groupbuy }) => (
             onClick={ () => window.open(`${groupbuy.url}`, '_blank') }
             className={ `${cardStyle(inView)} card flex-md-row mb-4 box-shadow h-md-250` }
         >
-            <img className="card-img-left flex-auto d-md-block" src={ groupbuy.imgUrl } alt={ groupbuy.name } />
+            <img className="card-img-left flex-auto d-md-block" src={ groupbuy.imgUrl } alt={ shortText(25, groupbuy.name)} />
             <div className="card-body d-flex flex-column align-items-start">
                 { getCategorie(groupbuy.category) }
                 { getDates(groupbuy.openDate, groupbuy.closeDate) }
@@ -30,7 +31,7 @@ const Card = ({ groupbuy }) => (
                 <div className="d-flex align-items-start">
                     { groupbuy.tags.map((tag, idx) => <div className="p-2 tag-container"><span key={ `${tag}-${groupbuy.id}-${idx}` } className="badge badge-secondary">{tag}</span></div>) }
                 </div>
-                <p className="card-text mb-auto">{ `${take(150, groupbuy.description)}..` }</p>
+                <p className="card-text mb-auto">{ shortText(150, groupbuy.description) }</p>
              </div>
         </div>
       )}

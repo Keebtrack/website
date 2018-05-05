@@ -11,7 +11,7 @@ const SecondaryPromo = ({ groupbuy }) => (
       <div className="card-body d-flex flex-column align-items-start">
         <strong className="d-inline-block mb-2 text-primary">  { getCategorie(groupbuy.category) }</strong>
         <h3 className="mb-0">
-          <a className="text-dark" href="#">{ shortText(25, groupbuy.name) }</a>
+          <a className="text-dark" href="#">{ shortText(22, groupbuy.name) }</a>
         </h3>
         { getDates(groupbuy.openDate, groupbuy.closeDate) }
         <p className="card-text mb-auto">{ shortText(75, groupbuy.description) }</p>

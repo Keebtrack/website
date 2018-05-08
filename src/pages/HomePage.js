@@ -22,7 +22,7 @@ class HomePage extends Component {
   fetchMore() {
     const { after } = this.props.data.groupbuys.pageInfo;
     this.props.data.fetchMore({
-      variables: { first: 25, after },
+      variables: { first: 15, after },
       updateQuery: ({ groupbuys }, { fetchMoreResult: { groupbuys: newGroupbuys } }) => ({
         groupbuys: {
           __typename: groupbuys.__typename,
@@ -99,7 +99,7 @@ HomePage.defaultProps = {
 export default compose(graphql(GROUPBUYS_QUERY, {
   options: {
     variables: {
-      first: 10,
+      first: 25,
       after: ''
     }
   },

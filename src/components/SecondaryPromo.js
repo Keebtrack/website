@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import getCategorie from '@helpers/category';
-import getDates from '@helpers/dates';
+import countDown from '@helpers/dates';
 import shortText from '@helpers/shortText';
 
 const SecondaryPromo = ({ groupbuy }) => (
@@ -13,7 +13,7 @@ const SecondaryPromo = ({ groupbuy }) => (
         <h3 className="mb-0">
           <a className="text-dark" href="#">{ shortText(22, groupbuy.name) }</a>
         </h3>
-        { getDates(groupbuy.openDate, groupbuy.closeDate) }
+        { countDown(groupbuy.closeDate) }
         <p className="card-text mb-auto">{ shortText(75, groupbuy.description) }</p>
       </div>
       <img className="card-img-right flex-auto d-md-block" src={ groupbuy.imgUrl } alt={ groupbuy.name } />

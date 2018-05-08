@@ -4,7 +4,7 @@ import { take } from 'ramda';
 import Observer from 'react-intersection-observer';
 
 import getCategorie from '@helpers/category';
-import getDates from '@helpers/dates';
+import countDown from '@helpers/dates';
 import shortText from '@helpers/shortText';
 
 const cardStyle = inView => {
@@ -28,7 +28,7 @@ const Card = ({ groupbuy }) => {
             <img className="card-img-left flex-auto d-md-block" src={ groupbuy.imgUrl } alt={ shortText(25, groupbuy.name)} />
             <div className="card-body d-flex flex-column align-items-start">
                 { getCategorie(groupbuy.category) }
-                { getDates(groupbuy.openDate, groupbuy.closeDate) }
+                { countDown(groupbuy.closeDate) }
                 <h3 className="mb-0">
                     <a className="text-dark" href="s#">{ groupbuy.name }</a>
                 </h3>

@@ -22,7 +22,7 @@ class HomePage extends Component {
   fetchMore() {
     const { after } = this.props.data.groupbuys.pageInfo;
     this.props.data.fetchMore({
-      variables: { first: 10, after },
+      variables: { first: 25, after },
       updateQuery: ({ groupbuys }, { fetchMoreResult: { groupbuys: newGroupbuys } }) => ({
         groupbuys: {
           __typename: groupbuys.__typename,

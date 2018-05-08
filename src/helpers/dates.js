@@ -7,7 +7,7 @@ const renderer = ({ total, days, hours, minutes, seconds, milliseconds, complete
   if (completed) {
     return <div className="mb-1 text-muted">Ended!</div>
   } else if (days !== 0) {
-    return <div className="mb-1 text-muted">{days} days, {hours} hours, {minutes} minutes and {seconds} seconds</div>;
+    return <div className="mb-1 text-muted">{days} days remaining</div>;
   } else {
     return <div className="mb-1 text-muted">{hours} hours, {minutes} minutes and {seconds} seconds</div>;
   }
